@@ -1,5 +1,6 @@
 import os
 import time
+
 from loguru import logger
 from PIL import Image
 
@@ -106,7 +107,7 @@ def find_coincidence(list1: list, list2: list) -> int:
         int: 偏移量
     """
     sum_diff_list = []
-    for i in range(0, len(list1[0])):
+    for i in range(len(list1[0])):
         diff = calc_average_absolute_deviation(list1, list2, i)
         sum_diff_list.append(diff)
 
